@@ -1,0 +1,105 @@
+html {
+    font-size: 25px;
+  }
+  .head{
+    font-size: 1.5rem;
+    margin-bottom:7%;
+  }
+  .header{
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    transform: translateY(+80%);
+    color: rgba(22, 21, 21, 0.925);
+    font-weight: 80;
+  }
+  .content{
+      font-family: 'Playfair Display', serif;
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      justify-content: space-around;
+      margin-left: 10px;
+  }
+  .para p{
+       font-size: 1.3rem;
+       position: relative;
+       top: 30%;
+       color: rgb(65, 58, 58);
+       margin-right: 10px;
+  }
+  .image{
+      width: 100%;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+  }
+  a{
+       text-decoration: none;
+       font-size: 1.4rem;
+       color: rgba(24, 23, 23, 0.925);
+       font-weight:bold;
+       margin-right: 10px;
+  }
+  a img{
+    width: 40px;
+    color: rgba(29, 27, 27, 0.925);
+    transform: translateY(30%);
+  }
+  /* animation */
+  .animated{
+      position: relative;
+      margin: 0px 10px 0px 10px;
+      transform: translateY(-20%);
+      opacity: 0;
+    }
+    .animated{
+      opacity: 1;
+    }
+    .animated.active{
+      animation: fade-bottom 3s ease-in;
+    }
+    @keyframes fade-bottom {
+      from{
+        transform: translateY(100px);
+        opacity: 0;
+      }
+      to{
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  
+  @media screen and (max-width:700px) {
+    .head{
+      margin-bottom: 25%;
+      font-size: 1rem;
+    }
+      .header{
+        font-size: 1.5rem;
+        margin-top: 10px;
+        transform: none;
+      }
+       .content{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+       } 
+       .para p{
+        padding: 0%;
+        font-size: 0.8rem;
+        margin-right: 5px;
+      }
+      .image{
+        height: 80vh;
+      }
+       a{
+        font-size: 0.8rem;
+        color: aqua;
+        font-weight: bold;
+       }
+       a img{
+        width: 20px;
+        transform: translateY(30%);
+      }
+  }
+  
+  
